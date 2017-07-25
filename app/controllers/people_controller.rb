@@ -1,9 +1,8 @@
 class PeopleController < ApplicationController
 
-  def show
-    @peep = Person.find(params[:id])
+  def index
   end
-
+  
   def new
     @peep = Person.new
   end
@@ -13,10 +12,13 @@ class PeopleController < ApplicationController
     if @peep.save
       session[:peep_id] = @peep.id
       flash[:notice] = "You have successfully signed up"
-      redirect_to root_path
+      redirect_to people_path
     else
       render :new
     end
+  end
+
+  def show
   end
 
   private 

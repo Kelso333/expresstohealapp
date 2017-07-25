@@ -1,10 +1,11 @@
-<div class="main-content">
+
+<div class="obstacles-page">
   <div class="row">
     <div class="col-sm-12">
 
         <%= form_for @obstacle, url: obstacles_path do |form| %>
         <%= form.label :obstacle_content %>
-        <%= form.text_field :obstacle_content %><br>
+        <p class="obstacle-post"><%= form.text_field :obstacle_content %> </li><br>
 
 
         <%= form.file_field :image %><br><br>
