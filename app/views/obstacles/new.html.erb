@@ -1,0 +1,20 @@
+<div class="main-content">
+  <div class="row">
+    <div class="col-sm-12">
+
+        <%= form_for @obstacle, url: obstacles_path do |form| %>
+        <%= form.label :obstacle_content %>
+        <%= form.text_field :obstacle_content %><br>
+
+
+        <%= form.file_field :image %><br><br>
+
+        <%= link_to 'Create Obstacle!', obstacles_new_path, { :class=>"btn btn-default navbar-btn" } %>
+        <% end %>
+        
+        <br>
+         <%= link_to 'Back', '/obstacles', { :class=>"btn btn-default navbar-btn" } %>
+
+    </div>
+  </div>
+</div>
