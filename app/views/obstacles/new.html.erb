@@ -3,18 +3,18 @@
   <div class="row">
     <div class="col-sm-12">
 
-        <%= form_for @obstacle, url: obstacles_path do |form| %>
-        <%= form.label :obstacle_content %>
-        <p class="obstacle-post"><%= form.text_field :obstacle_content %> </li><br>
+        <%= form_for @obstacle, url: {action: "create"} do |form| %>
+        <%= form.label :obstacle_content, 'Obstacle Content' %>
+        <%= form.text_area :obstacle_content, size: "100x7" %><br>
 
 
         <%= form.file_field :image %><br><br>
 
-        <%= link_to 'Create Obstacle!', obstacles_new_path, { :class=>"btn btn-default navbar-btn" } %>
+        <%= form.submit 'Create Obstacle!', { :class=>"btn btn-default navbar-btn" } %>
         <% end %>
         
         <br>
-         <%= link_to 'Back', '/obstacles', { :class=>"btn btn-default navbar-btn" } %>
+         <%= link_to 'Back to Homepage', root_path, { :class=>"btn btn-default navbar-btn" } %>
 
     </div>
   </div>

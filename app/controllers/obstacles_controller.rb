@@ -1,14 +1,24 @@
 class ObstaclesController < ApplicationController
 
-    def index
+    def index 
+      @obstacle = Obstacle.all
+    end
+
+    def show
+      @obstacle = Obstacle.find(params[:obstacle])
     end
 
     def new
-        @obstacle = Obstacle.new
+      @obstacle = Obstacle.new
     end
 
     def create
-         @obstacle = Obstacle.new
+      @obstacle = Obstacle.new(params.require(:obstacle).permit(:obstacle, :content))
+        if @obstacle.save
+          redirect_to obstacles_path
+        else
+          render :new
+        end
     end
 
 end

@@ -3,30 +3,24 @@
   <div class="row">
     <div class="col-sm-12">
 
-      <h1>Obstacles</h1>
+      <div class="new-obstacle">
+        <%= link_to 'New Obstacle', "obstacles/new", { :class=>"btn btn-default navbar-btn" } %>
+      </div>
 
-    
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      
+        <div class="header">
+          <h1>Express Yourself</h1>
+        </div>
+
+
+        <div class="obstacles">
+          <div class="container">
+            <% @obstacle.each do |obstacle| %>
+              <div class="obstacle">
+                <p class="content"><%= @obstacle_content %></p> 
+              </div>
+            <% end %>
+          </div>
+        </div>
 
     </div>
   </div>
