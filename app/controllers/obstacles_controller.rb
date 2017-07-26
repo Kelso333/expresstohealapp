@@ -1,4 +1,5 @@
 class ObstaclesController < ApplicationController
+     before_action :authorize, except: [:create]
 
     def index 
       @obstacles = Obstacle.all
