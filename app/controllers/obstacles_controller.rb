@@ -1,7 +1,7 @@
 class ObstaclesController < ApplicationController
 
     def index 
-      @obstacle = Obstacle.all
+      @obstacles = Obstacle.all
     end
 
 
@@ -10,7 +10,7 @@ class ObstaclesController < ApplicationController
     end
 
     def create
-      @obstacle = Obstacle.new(params.require(:obstacle).permit(:obstacle, :content))
+      @obstacle = Obstacle.new(params.require(:obstacle).permit(:obstacle_content))
 
       @obstacle.person = current_peep
 

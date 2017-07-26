@@ -9,11 +9,14 @@
         </div>
 
         <div class="obstacles">
+          
+
+          
           <div class="container">
-            <% @obstacle.each do |obstacle| %>
+            <% @obstacles.each do |obstacle| %>
               <div class="obstacle">
                 <p class="content">
-                  <%= @obstacle_content %>
+                  content = <%= obstacle.obstacle_content %>
                 </p> 
               </div>
             <% end %>
