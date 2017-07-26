@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/obstacles', to: 'obstacles#index'
   get '/obstacles/new', to: 'obstacles#new'
   post '/obstacles', to: 'obstacles#create'
+  
 
   get '/signup', to: 'people#new'
 

@@ -1,12 +1,23 @@
 <br>
   <%= form_for @obstacle, url: {controller: "obstacles", action: "create"} do |form| %>
-  <%= form.label :obstacle_content, 'Obstacle Content' %>
-  <%= form.text_area :obstacle_content, size: "100x7" %><br>
+    <% if @obstacle.errors.any? %>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+          <ul>
+            <% for message in @obstacle.errors.full_messages %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+      </div>
+    <% end %>
+
+    <%= form.label :obstacle_content, 'Obstacle Content' %>
+    <%= form.text_area :obstacle_content, size: "100x7" %><br>
 
 
-  <%= form.file_field :image %><br><br>
+    <%= form.file_field :image %><br><br>
 
-  <%= form.submit 'Create Obstacle!', { :class=>"btn btn-default navbar-btn" } %>
+  <%= form.submit 'Create Obstacle!', :class=>"btn btn-default navbar-btn" %>
   <% end %>
         
   
