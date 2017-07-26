@@ -4,7 +4,10 @@ class ObstaclesController < ApplicationController
     def index 
       @obstacles = Obstacle.all
     end
-
+    
+    def show
+      redirect_to obstacles_path(Obstacle.first) and return
+    end
 
     def new
       @obstacle = Obstacle.new
