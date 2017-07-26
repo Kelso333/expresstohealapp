@@ -47,7 +47,7 @@
 
       <p class="navbar-text navbar-right">
         <% if current_peep %>
-          Welcome, <%= current_peep.username %> 
+          Welcome, <%= link_to current_peep.username, profile_path %> 
           <%= link_to 'Log Out', logout_path('dummy'), { :class=>"btn btn-default navbar-btn", method: :delete } %> 
             <% else %>
           <%= link_to 'Log In', login_path, { :class=>"btn btn-default navbar-btn" } %> |
@@ -60,7 +60,7 @@
 
     <%= yield %>
    
-    <footer class="nav navbar navbar-fixed-bottom">
+    <footer class="footer">
       <div class="footer-copyright">
         <div class="container-fluid">
           © 2017 Express To Heal. All Rights Reserved. 

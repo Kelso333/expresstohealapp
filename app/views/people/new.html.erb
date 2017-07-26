@@ -1,6 +1,6 @@
 
       <h1 class="sign-up">Sign Up</h1>
-      <br>
+    
         <%= form_for @peep do |f| %>
           <% if @peep.errors.any? %>
             <div class="error_messages">
@@ -45,11 +45,12 @@
             <%= f.text_field :title %>
           </div>
           
-          <br>
           <div class="actions">
-            <%= f.submit 'Create Person', { :class=>"btn btn-default navbar-btn" } %>
+            <%= link_to f.submit 'Create Person', { :class=>"btn btn-default navbar-btn" } %>
           </div>
 
         <% end %>
+
+
 
         
