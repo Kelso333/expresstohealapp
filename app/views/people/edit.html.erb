@@ -1,7 +1,7 @@
 
-      <h1 class="sign-up">Sign Up</h1>
+      <h1 class="sign-up">Edit Profile</h1>
     
-        <%= form_for @peep do |f| %>
+        <%= form_for @peep, url: profile_path, method: :patch do |f| %>
           <% if @peep.errors.any? %>
             <div class="error_messages">
               <h2>Form is invalid</h2>
@@ -50,7 +50,7 @@
           </div>
           
           <div class="actions">
-            <%= f.submit 'Create Person', { :class=>"btn btn-default navbar-btn" } %>
+            <%= f.submit 'Save Profile', { :class=>"btn btn-default navbar-btn" } %>
           </div>
 
         <% end %>

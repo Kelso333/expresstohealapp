@@ -1,2 +1,25 @@
-<h1><%= @peep.username  %></h1>
+<h1><%= @peep.username  %></h1> 
+<%= link_to "edit profile", profile_edit_path %>
 
+
+<div class="obstacles">
+          <div class="container">
+            <% @peep.obstacles.each do |obstacle| %>
+              <div class="obstacle">
+                <p class="content main-obstacles">
+
+                  <div class="container">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <p> <%= current_peep.username %> </p>
+                      </div>
+                        <div class="panel-body">
+                          <%= obstacle.obstacle_content %>
+                        </div>
+                    </div>
+                  </div>
+                </p> 
+              </div>
+            <% end %>
+          </div>
+        </div>

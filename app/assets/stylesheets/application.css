@@ -16,6 +16,7 @@
 
  body {
    padding-top: 80px;
+   padding-bottom: 50px;
  }
 
 .navbar-left { 
@@ -26,7 +27,7 @@
   left: 18px;
 }
 
-.about, .contact, .new-obstacle, .obstacle-header, .sign-up, .actions, .log-in, .main-obstacles, .btn {
+.about, .contact, .new-obstacle, .obstacle-header, .sign-up, .actions, .log-in, .main-obstacles, .btn, .tag-line {
   font-family: 'Rajdhani', sans-serif;
 }
 
@@ -84,7 +85,7 @@ nav.navbar-fixed-top {
   position: absolute;
   right: 0;
   left: 0;
-  bottom: 0;
+  bottom: -100px;
   padding: 1rem;
   background-color: #efefef;
   text-align: center;
