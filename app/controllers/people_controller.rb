@@ -12,19 +12,20 @@ class PeopleController < ApplicationController
     if @peep.save
       session[:peep_id] = @peep.id
       flash[:notice] = "You have successfully signed up"
-      redirect_to people_path
+      redirect_to profile_path
     else
       render :new
     end
   end
 
   def show
+    @peep = current_peep
   end
 
   private 
 
   def peep_params
-    params.require(:peep).permit(:username, :password, :password_confirmation, :email, :city, :state, :country, :title)
+    params.require(:person).permit(:username, :password, :password_confirmation, :email, :city, :state, :country, :title)
   end
 
 end

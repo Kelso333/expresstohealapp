@@ -1,21 +1,15 @@
-
-<div class="obstacles-page">
-  <div class="row">
-    <div class="col-sm-12">
-
-        <%= form_for @obstacle, url: {action: "create"} do |form| %>
-        <%= form.label :obstacle_content, 'Obstacle Content' %>
-        <%= form.text_area :obstacle_content, size: "100x7" %><br>
+<br>
+  <%= form_for @obstacle, url: {controller: "obstacles", action: "create"} do |form| %>
+  <%= form.label :obstacle_content, 'Obstacle Content' %>
+  <%= form.text_area :obstacle_content, size: "100x7" %><br>
 
 
-        <%= form.file_field :image %><br><br>
+  <%= form.file_field :image %><br><br>
 
-        <%= form.submit 'Create Obstacle!', { :class=>"btn btn-default navbar-btn" } %>
-        <% end %>
+  <%= form.submit 'Create Obstacle!', { :class=>"btn btn-default navbar-btn" } %>
+  <% end %>
         
-        <br>
-         <%= link_to 'Back to Homepage', root_path, { :class=>"btn btn-default navbar-btn" } %>
+  
+    <%= link_to 'Back to Homepage', root_path, { :class=>"btn btn-default navbar-btn" } %>
 
-    </div>
-  </div>
-</div>
+  

@@ -32,7 +32,7 @@
   <nav class="navbar navbar-default navbar-fixed-top">
    
     <div class="navbar-header logo">
-      <%= image_tag "expresstoheal_logo.png", {height: 60} %>
+      <%= image_tag "expresstoheal_logo.png", {height: 55} %>
     </div>
 
     <div class="collapse navbar-collapse">
@@ -47,25 +47,23 @@
 
       <p class="navbar-text navbar-right">
         <% if current_peep %>
-          <%= current_peep.name %> 
+          Welcome, <%= current_peep.username %> 
           <%= link_to 'Log Out', logout_path('dummy'), { :class=>"btn btn-default navbar-btn", method: :delete } %> |
         <% else %>
           <%= link_to 'Log In', login_path, { :class=>"btn btn-default navbar-btn" } %> |
         <% end %> 
-
         <%= link_to 'Sign Up', signup_path, { :class=>"btn btn-default navbar-btn" } %>
       </p>
-
 
     </div>
   </nav>
 
     <%= yield %>
-
-    <footer class="footer">
+   
+    <footer class="nav navbar navbar-fixed-bottom">
       <div class="footer-copyright">
         <div class="container-fluid">
-            © 2017 Express To Heal. All Rights Reserved. 
+          © 2017 Express To Heal. All Rights Reserved. 
         </div>
       </div>
     </footer>
@@ -73,6 +71,6 @@
 </div>
 
 
-  </body>
-</html>
+    </body>
+  </html>
 <br>

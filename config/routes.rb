@@ -10,11 +10,11 @@ Rails.application.routes.draw do
   get '/obstacles/new', to: 'obstacles#new'
   post '/obstacles', to: 'obstacles#create'
 
-  
   get '/signup', to: 'people#new'
-  post '/people', to: 'people#create'
-  get '/people', to: 'people#show'
 
+  resources :people, only: [:new, :create]
+
+  get '/profile', to: 'people#show'
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'

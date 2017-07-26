@@ -1,27 +1,22 @@
 
-<div class="obstacles-page">
-  <div class="row">
-    <div class="col-sm-12">
-
+      <br>
       <div class="new-obstacle">
         <%= link_to 'New Obstacle', "obstacles/new", { :class=>"btn btn-default navbar-btn" } %>
       </div>
 
-        <div class="header">
+        <div class="obstacle-header">
           <h1>Express Yourself</h1>
         </div>
-
 
         <div class="obstacles">
           <div class="container">
             <% @obstacle.each do |obstacle| %>
               <div class="obstacle">
-                <p class="content"><%= @obstacle_content %></p> 
+                <p class="content">
+                  <%= @obstacle_content %>
+                </p> 
               </div>
             <% end %>
           </div>
         </div>
 
-    </div>
-  </div>
-</div>

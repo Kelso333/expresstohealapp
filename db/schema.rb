@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170724170838) do
+ActiveRecord::Schema.define(version: 20170725221758) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.text "content"
+    t.bigint "person_id"
+    t.bigint "obstacle_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["obstacle_id"], name: "index_comments_on_obstacle_id"
+    t.index ["person_id"], name: "index_comments_on_person_id"
+  end
 
   create_table "obstacles", force: :cascade do |t|
     t.text "obstacle_content"
@@ -23,6 +33,8 @@ ActiveRecord::Schema.define(version: 20170724170838) do
     t.datetime "image_updated_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "person_id"
+    t.index ["person_id"], name: "index_obstacles_on_person_id"
   end
 
   create_table "people", force: :cascade do |t|
@@ -37,4 +49,7 @@ ActiveRecord::Schema.define(version: 20170724170838) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "comments", "obstacles"
+  add_foreign_key "comments", "people"
+  add_foreign_key "obstacles", "people"
 end

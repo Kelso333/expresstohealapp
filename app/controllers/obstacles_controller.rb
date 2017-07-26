@@ -4,9 +4,7 @@ class ObstaclesController < ApplicationController
       @obstacle = Obstacle.all
     end
 
-    def show
-      @obstacle = Obstacle.find(params[:obstacle])
-    end
+  
 
     def new
       @obstacle = Obstacle.new

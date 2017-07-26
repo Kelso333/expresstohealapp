@@ -14,6 +14,10 @@
  *= require_self
  */
 
+ body {
+   padding-top: 80px;
+ }
+
 .navbar-left { 
   font-family: 'Rajdhani', sans-serif;
   font-size: 20px;
@@ -22,13 +26,12 @@
   left: 18px;
 }
 
-.sign-up, .log-in, .home-page, .about, .contact, .obstacles-page {
+.about, .contact, .new-obstacle, .obstacle-header, .sign-up, .actions, .log-in {
   font-family: 'Rajdhani', sans-serif;
-  position: relative;
-  margin-top: 100px;
 }
 
 .about-bio {
+  font-family: 'Rajdhani', sans-serif;
   font-size: 16px;
 }
  
@@ -40,7 +43,7 @@
 
  .logo {
   position: relative;
-  top: 9px;
+  top: 12px;
   left: 18px;
  }
 
@@ -67,4 +70,8 @@
   position: relative;
   top: 50px;
   left: 125px;
+}
+
+nav.navbar-fixed-top {
+  height: 80px;
 }
