@@ -17,9 +17,10 @@
                   <div class="container">
                     <div class="panel panel-default">
                       <div class="panel-heading">
-                        <p> <%= obstacle.person.username %> </p>
+                        <h5> <%= obstacle.person.username %> </h5>
                         <% if current_peep == obstacle.person %>
                           <%= link_to "edit", edit_obstacle_path(obstacle), class: "btn btn-primary btn-xs" %>
+                          <%= link_to "delete", obstacle, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-xs" %>
                         <% end %> 
                       </div>
                         <div class="panel-body">

@@ -28,8 +28,17 @@
   bottom: 0;
 }
 
-.about, .username, .contact, .new-obstacle, .obstacle-header, .sign-up, .actions, .log-in, .main-obstacles, .btn, .tag-line, p {
+p.obstacle-username {
+  font-size: 14px;
+}
+
+.username, .contact, .new-obstacle, .obstacle-header, .sign-up, .actions, .log-in, .main-obstacles, .btn, .tag-line, p {
   font-family: 'Rajdhani', sans-serif;
+}
+
+.edit, .about, .contact-word, .obstacle-header {
+  font-family: 'Rajdhani', sans-serif;
+  color: orange;
 }
 
 .about, .contact-word {
