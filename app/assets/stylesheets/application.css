@@ -28,11 +28,11 @@
   bottom: 0;
 }
 
-.about, .contact, .new-obstacle, .obstacle-header, .sign-up, .actions, .log-in, .main-obstacles, .btn, .tag-line, p {
+.about, .username, .contact, .new-obstacle, .obstacle-header, .sign-up, .actions, .log-in, .main-obstacles, .btn, .tag-line, p {
   font-family: 'Rajdhani', sans-serif;
 }
 
-.about {
+.about, .contact-word {
   font-size: 50px;
 }
 
@@ -75,7 +75,7 @@ div.about-bio {
 
 .tagline {
   font-family: 'Rajdhani', sans-serif;
-  line-height: 45px;
+  line-height: 50px;
   font-size: 45px;
   text-align: center;
   position: relative;
@@ -84,8 +84,8 @@ div.about-bio {
 
 .intro-pics {
   position: relative;
-  top: 70px;
-  left: 125px;
+  top: 80px;
+  left: 120px;
 }
 
 nav.navbar-fixed-top {
@@ -101,3 +101,16 @@ footer.navbar-default {
   padding: 1.5rem;
 }
 
+.map {
+  float: right;
+  position: relative;
+  top: 30px;
+  right: 20px;
+}
+
+.contact {
+  position: relative;
+  top: 50px;
+  left: -40px;
+  text-align: center
+}

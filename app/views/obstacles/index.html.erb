@@ -18,10 +18,13 @@
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <p> <%= obstacle.person.username %> </p>
+                        <% if current_peep == obstacle.person %>
+                          <%= link_to "edit", edit_obstacle_path(obstacle), class: "btn btn-primary btn-xs" %>
+                        <% end %> 
                       </div>
                         <div class="panel-body">
                          <%= obstacle.obstacle_content %> 
-                         
+                         <%= image_tag obstacle.image.url, height: "150" %>
                         </div>
                     </div>
                   </div>

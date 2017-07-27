@@ -1,4 +1,4 @@
-<h1><%= @peep.username  %></h1> 
+<h1 class="username"><%= @peep.username  %></h1> 
 <%= link_to "edit profile", profile_edit_path, :class=>"btn btn-default navbar-btn" %>
 
 
@@ -11,7 +11,7 @@
                   <div class="container">
                     <div class="panel panel-default">
                       <div class="panel-heading">
-                        <p> <%= current_peep.username %> </p>
+                        <p> <%= current_peep.username.titleize %> </p>
                       </div>
                         <div class="panel-body">
                           <%= obstacle.obstacle_content %>

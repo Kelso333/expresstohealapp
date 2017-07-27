@@ -6,9 +6,7 @@ Rails.application.routes.draw do
   get '/about', to: 'home#about'
   get '/contact', to: 'home#contact'
 
-  get '/obstacles', to: 'obstacles#index'
-  get '/obstacles/new', to: 'obstacles#new'
-  post '/obstacles', to: 'obstacles#create'
+  resources :obstacles 
 
 
   get '/signup', to: 'people#new'
