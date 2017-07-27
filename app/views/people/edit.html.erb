@@ -44,10 +44,13 @@
             <%= f.label :title %>
             <%= f.text_field :title %>
           </div>
-          <div class="field">
-              <%= f.label :image %><br>
+          
+          <br>
+           <div class="field">
+              <p>Profile Image:</p>
               <%= f.file_field :image %>
           </div>
+          <br>
           
           <div class="actions">
             <%= f.submit 'Save Profile', { :class=>"btn btn-default navbar-btn" } %>

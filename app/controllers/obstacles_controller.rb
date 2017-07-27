@@ -7,6 +7,7 @@ class ObstaclesController < ApplicationController
     
     def show
       redirect_to obstacles_path(Obstacle.first) and return
+      @obstacle = Time.now
     end
 
     def new

@@ -14,14 +14,14 @@
             <% @obstacles.each do |obstacle| %>
               <div class="obstacle">
                 <p class="content main-obstacles">
-
                   <div class="container">
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <p> <%= obstacle.person.username %> </p>
                       </div>
                         <div class="panel-body">
-                          <%= obstacle.obstacle_content %>
+                         <%= obstacle.obstacle_content %> 
+                         
                         </div>
                     </div>
                   </div>
@@ -29,4 +29,6 @@
               </div>
             <% end %>
           </div>
+          <br>
+          <br>
         </div>

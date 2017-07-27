@@ -44,13 +44,15 @@
             <%= f.label :title %>
             <%= f.text_field :title %>
           </div>
+          <br>
           <div class="field">
-              <%= f.label :image %><br>
-              <%= f.file_field :image %>
+            <p>Upload Image</p>
+            <%= f.file_field :image %>
           </div>
           
+          <br>
           <div class="actions">
-            <%= f.submit 'Create Person', { :class=>"btn btn-default navbar-btn" } %>
+            <%= f.submit 'Create Person',  :class=>"btn btn-default navbar-btn"  %>
           </div>
 
         <% end %>

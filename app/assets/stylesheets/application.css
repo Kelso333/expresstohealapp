@@ -24,10 +24,22 @@
   position: relative;
   top: 16px; 
   left: 18px;
+  right: 0;
+  bottom: 0;
 }
 
-.about, .contact, .new-obstacle, .obstacle-header, .sign-up, .actions, .log-in, .main-obstacles, .btn, .tag-line {
+.about, .contact, .new-obstacle, .obstacle-header, .sign-up, .actions, .log-in, .main-obstacles, .btn, .tag-line, p {
   font-family: 'Rajdhani', sans-serif;
+}
+
+.about {
+  font-size: 50px;
+}
+
+div.about-bio {
+  width: 800px;
+  height: 120px;
+  
 }
 
 .about-bio {
@@ -38,7 +50,10 @@
  .navbar-right {
   font-family: 'Rajdhani', sans-serif;
   position: relative;
+  top: 0;
   left: -60px;
+  right: 0;
+  bottom: 0;
  }
 
  .logo {
@@ -55,20 +70,21 @@
  }
 
 .container-fluid {
-  color: grey;
+  color: orange;
 }
 
 .tagline {
   font-family: 'Rajdhani', sans-serif;
-  font-size: 35px;
+  line-height: 45px;
+  font-size: 45px;
   text-align: center;
   position: relative;
-  top: 20px;
+  top: 50px;
 }
 
 .intro-pics {
   position: relative;
-  top: 50px;
+  top: 70px;
   left: 125px;
 }
 
@@ -80,12 +96,8 @@ nav.navbar-fixed-top {
   width: 800px;
 }
 
-.footer {
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: -100px;
-  padding: 1rem;
-  background-color: #efefef;
+footer.navbar-default {
   text-align: center;
+  padding: 1.5rem;
 }
+
