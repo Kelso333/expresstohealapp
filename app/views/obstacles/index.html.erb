@@ -26,9 +26,11 @@
                         <div class="panel-body">
                          <%= obstacle.obstacle_content %> 
                         </div>
-                        <div class="content-image">
-                         <%= image_tag obstacle.image.url, height: "150" %>
-                        </div>
+                        <% if obstacle.image.url != "/images/original/missing.png" %>
+                          <div class="content-image">
+                          <%= image_tag obstacle.image.url, height: "150" %>
+                          </div>
+                        <% end %>
                     </div>
                   </div>
                 </p> 
