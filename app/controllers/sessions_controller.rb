@@ -15,8 +15,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-      session[:peep_id] = nil
-      redirect_to root_path, notice: "Logged out!"
+    session[:peep_id] = nil
+    redirect_to root_path, notice: "Logged out!"
   end
 
 end

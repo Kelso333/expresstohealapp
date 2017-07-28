@@ -1,15 +1,12 @@
+<br>
+  <div class="new-obstacle">
+    <%= link_to 'New Obstacle', "obstacles/new", { :class=>"btn btn-default navbar-btn" } %>
+  </div>
 
-      <br>
-      <div class="new-obstacle">
-        <%= link_to 'New Obstacle', "obstacles/new", { :class=>"btn btn-default navbar-btn" } %>
-      </div>
-
-        <div class="obstacle-header">
-          <h1>Express Yourself</h1>
-        </div>
-
+    <div class="obstacle-header">
+      <h1>Express Yourself</h1>
+    </div>
         <div class="obstacles">
-          
           <div class="container">
             <% @obstacles.each do |obstacle| %>
               <div class="obstacle">
@@ -26,11 +23,11 @@
                         <div class="panel-body">
                          <%= obstacle.obstacle_content %> 
                         </div>
-                        <% if obstacle.image.url != "/images/original/missing.png" %>
-                          <div class="content-image">
-                          <%= image_tag obstacle.image.url, height: "150" %>
-                          </div>
-                        <% end %>
+                          <% if obstacle.image.url != "/images/original/missing.png" %>
+                            <div class="content-image">
+                              <%= image_tag obstacle.image.url, height: "150" %>
+                            </div>
+                          <% end %>
                     </div>
                   </div>
                 </p> 

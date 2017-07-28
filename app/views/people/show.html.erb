@@ -1,34 +1,36 @@
 <h1 class="username"><%= @peep.username  %></h1> 
-<%= link_to "edit profile", profile_edit_path, :class=>"btn btn-default navbar-btn" %>
+  <%= link_to "edit profile", profile_edit_path, :class=>"btn btn-default navbar-btn" %>
 
 
 <div class="obstacles">
-          <div class="container">
-            <% @peep.obstacles.each do |obstacle| %>
-              <div class="obstacle">
-                <p class="content main-obstacles">
+  <div class="container">
+    <% @peep.obstacles.each do |obstacle| %>
+      <div class="obstacle">
+        <p class="content main-obstacles">
 
-                  <div class="container">
-                    <div class="panel panel-default">
-                       <div class="panel-heading">
-                        <h5> <%= obstacle.person.username %> </h5>
-                          <% if current_peep == obstacle.person %>
-                            <%= link_to "edit", edit_obstacle_path(obstacle), class: "btn btn-info btn-xs" %>
-                            <%= link_to "delete", obstacle, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-xs" %>
-                          <% end %> 
-                      </div>
-                        <div class="panel-body">
-                         <%= obstacle.obstacle_content %> 
-                        </div>
-                        <% if obstacle.image.url != "/images/original/missing.png" %>
-                          <div class="content-image">
-                          <%= image_tag obstacle.image.url, height: "150" %>
-                          </div>
-                        <% end %>
-                    </div>
+          <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                <h5> <%= obstacle.person.username %> </h5>
+                  <% if current_peep == obstacle.person %>
+                    <%= link_to "edit", edit_obstacle_path(obstacle), class: "btn btn-info btn-xs" %>
+                    <%= link_to "delete", obstacle, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-xs" %>
+                  <% end %> 
+                </div>
+                
+                <div class="panel-body">
+                  <%= obstacle.obstacle_content %> 
+                </div>
+
+                <% if obstacle.image.url != "/images/original/missing.png" %>
+                  <div class="content-image">
+                    <%= image_tag obstacle.image.url, height: "150" %>
                   </div>
-                </p> 
-              </div>
-            <% end %>
+                <% end %>
+            </div>
           </div>
-        </div>
+        </p> 
+      </div>
+    <% end %>
+  </div>
+</div>

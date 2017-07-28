@@ -1,5 +1,5 @@
 class ObstaclesController < ApplicationController
-     before_action :authorize, except: [:create]
+    before_action :authorize, except: [:create]
 
     def index 
       @obstacles = Obstacle.all
@@ -26,19 +26,19 @@ class ObstaclesController < ApplicationController
 
     def create
       @obstacle = Obstacle.new(params.require(:obstacle).permit(:obstacle_content, :image))
-        @obstacle.person = current_peep 
-          if @obstacle.save
-            redirect_to obstacles_path
-          else
-            render :new
-          end
+      @obstacle.person = current_peep 
+        if @obstacle.save
+          redirect_to obstacles_path
+        else
+          render :new
+        end
     end
 
     def destroy
       @obstacle = Obstacle.find(params[:id])
-        @obstacle.destroy
-          redirect_to obstacles_path
-          flash[:notice] = "Your obstacle has been deleted."
+      @obstacle.destroy
+        redirect_to obstacles_path
+        flash[:notice] = "Your obstacle has been deleted."
     end
 
 end

@@ -9,12 +9,12 @@ class PeopleController < ApplicationController
 
   def create 
     @peep = Person.new(peep_params)
-    if @peep.save
-      session[:peep_id] = @peep.id
-      flash[:notice] = "You have successfully signed up"
-      redirect_to profile_path
+      if @peep.save
+        session[:peep_id] = @peep.id
+        flash[:notice] = "You have successfully signed up"
+        redirect_to profile_path
     else
-      render :new
+        render :new
     end
   end
 
@@ -28,7 +28,7 @@ class PeopleController < ApplicationController
 
   def update 
     current_peep.update_attributes(peep_params)
-    redirect_to profile_path
+      redirect_to profile_path
   end
 
   private 
