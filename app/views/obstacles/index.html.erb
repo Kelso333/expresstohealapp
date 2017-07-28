@@ -18,13 +18,15 @@
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <h5> <%= obstacle.person.username %> </h5>
-                        <% if current_peep == obstacle.person %>
-                          <%= link_to "edit", edit_obstacle_path(obstacle), class: "btn btn-primary btn-xs" %>
-                          <%= link_to "delete", obstacle, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-xs" %>
-                        <% end %> 
+                          <% if current_peep == obstacle.person %>
+                            <%= link_to "edit", edit_obstacle_path(obstacle), class: "btn btn-info btn-xs" %>
+                            <%= link_to "delete", obstacle, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-xs" %>
+                          <% end %> 
                       </div>
                         <div class="panel-body">
                          <%= obstacle.obstacle_content %> 
+                        </div>
+                        <div class="content-image">
                          <%= image_tag obstacle.image.url, height: "150" %>
                         </div>
                     </div>

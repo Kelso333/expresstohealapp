@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   get '/contact', to: 'home#contact'
 
   resources :obstacles 
-  
+  resources :comments
+
   get '/signup', to: 'people#new'
 
   resources :people, only: [:new, :create]

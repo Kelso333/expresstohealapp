@@ -28,7 +28,7 @@
   bottom: 0;
 }
 
-p.obstacle-username {
+p.obstacle-username { 
   font-size: 14px;
 }
 
@@ -122,4 +122,12 @@ footer.navbar-default {
   top: 50px;
   left: -40px;
   text-align: center
+}
+
+.content-image {
+  margin: 10px 50px;
+}
+
+h5 {
+  font-size: 17px;
 }

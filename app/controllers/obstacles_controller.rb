@@ -36,9 +36,9 @@ class ObstaclesController < ApplicationController
 
     def destroy
       @obstacle = Obstacle.find(params[:id])
-      @obstacle.destroy
-      redirect_to obstacles_path
-      flash[:notice] = "Your obstacle has been deleted."
+        @obstacle.destroy
+          redirect_to obstacles_path
+          flash[:notice] = "Your obstacle has been deleted."
     end
 
 end
